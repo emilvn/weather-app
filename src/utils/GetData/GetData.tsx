@@ -1,5 +1,5 @@
 import React from 'react';
-import WeatherDetails from "../../types/types";
+import WeatherDetails from "../../types/types.ts";
 export default async function GetData(
     city:string,
     setWeather:React.Dispatch<React.SetStateAction<WeatherDetails | null>>,

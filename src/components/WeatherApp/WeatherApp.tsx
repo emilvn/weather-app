@@ -2,8 +2,8 @@ import React from 'react';
 import "./WeatherApp.css";
 import WeatherDetails from "../../types/types.ts";
 import GetData from "../../utils/GetData/GetData.tsx";
-import WeatherInfo from "../WeatherInfo/WeatherInfo";
-import CityInput from "../CityInput/CityInput";
+import WeatherInfo from "../WeatherInfo/WeatherInfo.tsx";
+import CityInput from "../CityInput/CityInput.tsx";
 
 export default function WeatherApp():React.ReactElement {
     const [city, setCity] = React.useState<string>('');

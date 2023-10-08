@@ -1,7 +1,7 @@
 import React from "react";
 import "./CityInput.css";
-import GetData from "../../utils/GetData/GetData";
-import WeatherDetails from "../../types/types";
+import GetData from "../../utils/GetData/GetData.tsx";
+import WeatherDetails from "../../types/types.ts";
 
 export default function CityInput(
     {city, setCity, setWeather, setError}

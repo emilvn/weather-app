@@ -10,7 +10,7 @@ body {
   align-items: center;
   min-height: 100vh;
   min-width: 100vw;
-  background-image: url("/assets/images/01d.jpg");
+  background-image: url("assets/images/01d.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

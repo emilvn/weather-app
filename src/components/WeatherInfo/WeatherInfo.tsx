@@ -1,6 +1,6 @@
 import React from "react";
 import "./WeatherInfo.css";
-import WeatherDetails from "../../../../weather-app-react/weather-app/src/types/types";
+import WeatherDetails from "../../types/types.ts";
 
 export default function WeatherInfo({weather}: { weather: WeatherDetails |null}):React.ReactElement | null {
     if(!weather) return null;

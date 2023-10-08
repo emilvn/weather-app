@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "A weather app built with React and TypeScript",
   "author": "Emil Vennervald Nielsen",
-  "homepage": "https://emilvn.github.io/weather-app",
+  "homepage": "https://emilvn.github.io/weather-app/",
   "type": "module",
   "scripts": {
     "dev": "vite",

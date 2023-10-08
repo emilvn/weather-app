@@ -1,0 +1,26 @@
+.CityInput{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+.CityInput input{
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 300;
+    width: 100%;
+}
+
+.CityInput button{
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 300;
+    background-color: #1a1a1a;
+    color: #fff;
+    cursor: pointer;
+}

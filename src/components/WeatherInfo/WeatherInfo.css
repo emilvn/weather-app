@@ -1,0 +1,12 @@
+.WeatherInfo{
+    border-radius: 0.5em;
+    padding: 0 0.5em 0.5em 0.5em;
+}
+.WeatherInfo-header{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+}
+.WeatherInfo-header img{
+    width: 5em;
+}

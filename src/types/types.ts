@@ -1,4 +1,8 @@
-export default interface WeatherDetails {
+import {Dispatch, SetStateAction} from "react";
+
+export type DS<T> = Dispatch<SetStateAction<T>>;
+
+export interface IWeatherData {
     base: string,
     clouds: {
         all: number

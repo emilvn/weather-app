@@ -4,7 +4,7 @@ import './index.css';
 import WeatherApp from './components/WeatherApp/WeatherApp.tsx';
 import Footer from "./components/Footer/Footer.tsx";
 
-const root = ReactDOM.createRoot(
+const root:ReactDOM.Root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(

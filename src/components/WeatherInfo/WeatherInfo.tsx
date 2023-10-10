@@ -1,8 +1,12 @@
-import React from "react";
+import {ReactElement} from "react";
 import "./WeatherInfo.css";
-import WeatherDetails from "../../types/types.ts";
+import {IWeatherData} from "../../types/types.ts";
 
-export default function WeatherInfo({weather}: { weather: WeatherDetails |null}):React.ReactElement | null {
+interface WeatherInfoProps {
+    weather: IWeatherData | null;
+}
+
+function WeatherInfo({weather}: WeatherInfoProps):ReactElement | null {
     if(!weather) return null;
     document.body.style.backgroundImage = `url(assets/images/${weather.weather[0].icon}.jpg)`;
     return (
@@ -18,3 +22,4 @@ export default function WeatherInfo({weather}: { weather: WeatherDetails |null})
         </div>
     );
 }
+export default WeatherInfo;

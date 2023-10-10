@@ -1,17 +1,17 @@
-import React from 'react';
+import {ReactElement, useEffect, useState} from 'react';
 import "./WeatherApp.css";
-import WeatherDetails from "../../types/types.ts";
+import {IWeatherData, DS} from "../../types/types.ts";
 import GetData from "../../utils/GetData/GetData.tsx";
 import WeatherInfo from "../WeatherInfo/WeatherInfo.tsx";
 import CityInput from "../CityInput/CityInput.tsx";
 
-export default function WeatherApp():React.ReactElement {
-    const [city, setCity] = React.useState<string>('');
-    const [weather, setWeather] = React.useState<WeatherDetails|null>(null);
-    const [error, setError] = React.useState<string>('');
+function WeatherApp():ReactElement {
+    const [city, setCity]:[string, DS<string>] = useState<string>('');
+    const [weather, setWeather]:[IWeatherData|null, DS<IWeatherData|null>] = useState<IWeatherData|null>(null);
+    const [error, setError]:[string, DS<string>] = useState<string>('');
 
-    React.useEffect(() => {
-        function handleKeydown(e:KeyboardEvent) {
+    useEffect(() => {
+        function handleKeydown(e:KeyboardEvent):void {
             if(e.key === "Enter") {
                 GetData(city, setWeather, setError);
             }
@@ -19,14 +19,16 @@ export default function WeatherApp():React.ReactElement {
         window.addEventListener("keydown", handleKeydown);
         return () => window.removeEventListener("keydown", handleKeydown);
     }, [city]);
+
     return (
-    <div className="WeatherApp">
-        <header className="WeatherApp-header">
-            <h1>Weather App</h1>
-        </header>
-        <CityInput city={city} setCity={setCity} setWeather={setWeather} setError={setError}/>
-        {error && <p className={"WeatherApp-error"}>{error}</p>}
-        {weather && <WeatherInfo weather={weather}/>}
-    </div>
+        <div className="WeatherApp">
+            <header className="WeatherApp-header">
+                <h1>Weather App</h1>
+            </header>
+            <CityInput city={city} setCity={setCity} setWeather={setWeather} setError={setError}/>
+            {error && <p className={"WeatherApp-error"}>{error}</p>}
+            {weather && <WeatherInfo weather={weather}/>}
+        </div>
     );
 }
+export default WeatherApp;

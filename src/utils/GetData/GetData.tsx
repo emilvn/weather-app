@@ -1,9 +1,8 @@
-import React from 'react';
-import WeatherDetails from "../../types/types.ts";
-export default async function GetData(
-    city:string,
-    setWeather:React.Dispatch<React.SetStateAction<WeatherDetails | null>>,
-    setError:React.Dispatch<React.SetStateAction<string>>
+import {IWeatherData, DS} from "../../types/types.ts";
+
+async function GetData(city:string,
+       setWeather:DS<IWeatherData | null>,
+       setError:DS<string>
     ):Promise<void> {
         const API_KEY:string = import.meta.env.VITE_API_KEY || "";
         try{
@@ -22,3 +21,4 @@ export default async function GetData(
             setError(`Error: ${err}`);
         }
 }
+export default GetData;

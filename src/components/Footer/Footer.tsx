@@ -1,6 +1,7 @@
-import React from 'react';
+import {ReactElement} from 'react';
 import './Footer.css';
-export default function Footer():React.ReactElement{
+
+function Footer():ReactElement{
     return (
         <footer className={"Footer"}>
             <span>Page created by <a href="https://emilvn.github.io">Emil Vennervald Nielsen</a></span>
@@ -9,3 +10,4 @@ export default function Footer():React.ReactElement{
         </footer>
     );
 }
+export default Footer;

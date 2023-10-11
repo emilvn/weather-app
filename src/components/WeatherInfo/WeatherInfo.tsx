@@ -1,5 +1,5 @@
 import {ReactElement} from "react";
-import "./WeatherInfo.css";
+import "../../styles/WeatherInfo.css";
 import {IWeatherData} from "../../types/types.ts";
 
 interface WeatherInfoProps {

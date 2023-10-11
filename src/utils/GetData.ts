@@ -1,4 +1,4 @@
-import {IWeatherData, DS} from "../../types/types.ts";
+import {IWeatherData, DS} from "../types/types.ts";
 
 async function GetData(city:string,
        setWeather:DS<IWeatherData | null>,

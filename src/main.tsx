@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import WeatherApp from './components/WeatherApp/WeatherApp.tsx';
 import Footer from "./components/Footer/Footer.tsx";
 

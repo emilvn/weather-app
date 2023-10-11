@@ -1,6 +1,6 @@
 import {ReactElement,ChangeEvent} from "react";
-import "./CityInput.css";
-import GetData from "../../utils/GetData/GetData.tsx";
+import "../../styles/CityInput.css";
+import GetData from "../../utils/GetData.ts";
 import {IWeatherData, DS} from "../../types/types.ts";
 
 interface CityInputProps {

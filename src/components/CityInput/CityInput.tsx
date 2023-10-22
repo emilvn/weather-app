@@ -1,6 +1,6 @@
 import {ReactElement,ChangeEvent} from "react";
 import "../../styles/CityInput.css";
-import GetData from "../../utils/GetData.ts";
+import GetWeatherByCity from "../../utils/GetWeatherByCity.ts";
 import {IWeatherData, DS} from "../../types/types.ts";
 
 interface CityInputProps {
@@ -20,7 +20,7 @@ function CityInput({city, setCity, setWeather, setError}:CityInputProps):ReactEl
                     onChange={(event:ChangeEvent<HTMLInputElement>) => setCity(event.target.value)} />
                 <button
                     type="button"
-                    onClick={() => GetData(city, setWeather, setError)}>
+                    onClick={() => GetWeatherByCity(city, setWeather, setError)}>
                     Search
                 </button>
             </div>

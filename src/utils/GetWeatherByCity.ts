@@ -1,8 +1,8 @@
 import {IWeatherData, DS} from "../types/types.ts";
 
-async function GetData(city:string,
-       setWeather:DS<IWeatherData | null>,
-       setError:DS<string>
+async function GetWeatherByCity(city:string,
+                                setWeather:DS<IWeatherData | null>,
+                                setError:DS<string>
     ):Promise<void> {
         const API_KEY:string = import.meta.env.VITE_API_KEY || "";
         try{
@@ -21,4 +21,4 @@ async function GetData(city:string,
             setError(`Error: ${err}`);
         }
 }
-export default GetData;
+export default GetWeatherByCity;

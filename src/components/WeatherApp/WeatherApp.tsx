@@ -1,7 +1,7 @@
 import {ReactElement, useEffect, useState} from 'react';
 import "../../styles/WeatherApp.css";
 import {IWeatherData, DS} from "../../types/types.ts";
-import GetData from "../../utils/GetData.ts";
+import GetWeatherByCity from "../../utils/GetWeatherByCity.ts";
 import WeatherInfo from "../WeatherInfo/WeatherInfo.tsx";
 import CityInput from "../CityInput/CityInput.tsx";
 
@@ -13,7 +13,7 @@ function WeatherApp():ReactElement {
     useEffect(() => {
         function handleKeydown(e:KeyboardEvent):void {
             if(e.key === "Enter") {
-                GetData(city, setWeather, setError);
+                GetWeatherByCity(city, setWeather, setError);
             }
         }
         window.addEventListener("keydown", handleKeydown);
